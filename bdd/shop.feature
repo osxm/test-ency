@@ -9,6 +9,7 @@ Feature: 用户购买商品
     And 显示购买成功的提示信息  
     And 购物车中该商品数量应减少到0  
     And 订单列表应新增一条订单记录  
+  ![image](https://github.com/user-attachments/assets/f25875aa-8424-4a15-a0fb-92da3e71d6b4)
   
   Scenario: 用户购买商品时库存不足  
     Given 用户已登录  
