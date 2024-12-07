@@ -11,45 +11,16 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <junit.jupiter.version>5.11.0</junit.jupiter.version>
-        <junit.platform.version>1.9.3</junit.platform.version>
-        
     </properties>
 
 
     <dependencies>  
-        <!-- JUnit Jupiter API for writing tests -->  
-        <dependency>  
-            <groupId>org.junit.jupiter</groupId>  
-            <artifactId>junit-jupiter-api</artifactId>  
-            <version>${junit.jupiter.version}</version>  
-
-            <scope>test</scope>  
-        </dependency>  
-  
-        <!-- JUnit Jupiter Engine for executing tests -->  
+        <!-- JUnit Jupiter Engine for executing tests   -->  
         <dependency>  
             <groupId>org.junit.jupiter</groupId>  
             <artifactId>junit-jupiter-engine</artifactId>  
-            <version>${junit.jupiter.version}</version>  
+            <version>5.11.2</version>  
             <scope>test</scope>  
-        </dependency>  
-  
-        <!-- (Optional) Only required to run tests in an IDE   
-             without built-in support for JUnit 5   
-        <dependency>  
-            <groupId>org.junit.platform</groupId>  
-            <artifactId>junit-platform-launcher</artifactId>  
-            <version>${junit.platform.version}</version>  
-            <scope>test</scope>  
-        </dependency>  -->
-
-        <!-- Mockito核心依赖 -->
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>5.14.2</version>
-            <scope>test</scope>
         </dependency>
 
          <!-- 如果需要Mockito的JUnit集成，可以添加以下依赖 -->
@@ -60,5 +31,16 @@
             <scope>test</scope>
         </dependency>
     </dependencies>  
+
+    <build>
+       <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.2</version>
+            </plugin>
+        </plugins>
+    </build>
+
 
 </project>
